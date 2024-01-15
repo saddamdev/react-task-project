@@ -1,21 +1,27 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Problem2 = () => {
-
-    return (
-
-        <div className="container">
-            <div className="row justify-content-center mt-5">
-                <h4 className='text-center text-uppercase mb-5'>Problem-2</h4>
-                
-                <div className="d-flex justify-content-center gap-3">
-                <button className="btn btn-lg btn-outline-primary" type="button" >All Contacts</button>
-                <button className="btn btn-lg btn-outline-warning" type="button" >US Contacts</button>
-                </div>
-                
-            </div>
+  return (
+    <div className='container'>
+      <div className='align-items-center justify-content-center row vh-100'>
+        <div className='col-8'>
+          <ul className='align-content-center flex-column gap-3 mb-3 nav nav-pills'>
+            <li className='nav-item'>
+              <NavLink to='/modal-a' className='nav-link active'>
+                All Contacts
+              </NavLink>
+            </li>
+            <li className='nav-item'>
+              <NavLink to='/modal-b' className='nav-link active'>
+                US Contacts
+              </NavLink>
+            </li>
+          </ul>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Problem2;
